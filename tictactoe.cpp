@@ -36,18 +36,21 @@ int main()
 
     Game.boardPrint();
 
+    unsigned int counter{ 0 };
     while (true)// Game loop
     {
-        cout << "\tChoose the coordinates X and Y: \n";
+
         cout << "\tPlayer 1\n";
-        cout << "\tThe X axis: ";
-        cin >> p1X;
-        cout << "\tThe Y axis: ";
-        cin >> p1Y;
         Game.boardAdd(p1X - 1, p1Y - 1, p1.symbol);
 
         Game.boardPrint();
 
+        cout << "\tPlayer 2\n";
+        Game.boardAdd(p2X - 1, p2Y - 1, p2.symbol);
+
+        Game.boardPrint();
+
+        counter++;
     }
     
 }

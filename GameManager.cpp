@@ -53,7 +53,17 @@ void GameManager::boardPrint() // Printing the board
 
 void GameManager::boardAdd(int x, int y, char sym)
 {
-	board[x][y] = sym;
+	std::cout << "\tChoose the coordinates X and Y: \n";
+	std::cout << "\tThe X axis: ";
+	std::cin >> x;
+	std::cout << "\tThe Y axis: ";
+	std::cin >> y;
+	if (board[x][y] == ' ')// empty space verification
+		board[x][y] = sym;
+	else {
+		std::cout << "\tAlready filled! choose another place\n";
+		boardAdd(x, y, sym);
+	}
 }
 
 bool GameManager::winCheck(char symbol)
