@@ -51,3 +51,8 @@ void GameManager::boardPrint() // Printing the board
 
 }
 
+void GameManager::boardAdd(int x, int y, char sym)
+{
+	board[x][y] = sym;
+}
+
