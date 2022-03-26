@@ -1,6 +1,6 @@
 #include "GameManager.h"
 
-GameManager::GameManager()// clearing board when game begins
+GameManager::GameManager()// Clearing board when game begins
 {
 	for (int i{ 0 }; i < 3; i++) {
 		for (int j{ 0 }; j < 3; j++) {
@@ -9,7 +9,7 @@ GameManager::GameManager()// clearing board when game begins
 	}
 }
 
-void GameManager::clearBoard() // clearing board on demand
+void GameManager::clearBoard() // Clearing board on demand
 {
 	for (int i{ 0 }; i < 3; i++) {
 		for (int j{ 0 }; j < 3; j++) {
@@ -18,7 +18,7 @@ void GameManager::clearBoard() // clearing board on demand
 	}
 }
 
-void GameManager::boardPrint() // printing the board
+void GameManager::boardPrint() // Printing the board
 {	
 	int x{ 1 }, y{ 1 }; 
 

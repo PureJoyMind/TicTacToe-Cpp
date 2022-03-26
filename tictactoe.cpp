@@ -10,7 +10,10 @@ using namespace std;
 
 int main()
 {
+    // Initiating game
     GameManager Game;
+
+
     
     Game.boardPrint();
 }

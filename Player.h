@@ -5,11 +5,14 @@
 
 struct Player
 {
-	std::string name;
-	char symbol;
+	std::string name;// Player name
+	char symbol;// Player symbol X or O
+	char board[3][3];// Player board to check for win
 
-	void setName();
-	void setSym();
+	void setName();// Getting player name
+	void setSym();// Getting player symbol
+	void transferBoard(int a,  int b, char sym);// Transfering the board from the game to players board
+	bool winCheck();// Checking players board for a win situation
 }; 
 
 
