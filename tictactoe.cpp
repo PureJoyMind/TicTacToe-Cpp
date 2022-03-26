@@ -29,28 +29,43 @@ int main()
     cout << "\n\tThere are four rounds the best of four wins!\n ";
 
     // X and Y for input
-    unsigned int p1X;
-    unsigned int p1Y;
-    unsigned int p2X;
-    unsigned int p2Y;
+    unsigned int p1X{ 0 };
+    unsigned int p1Y{ 0 };
+    unsigned int p2X{ 0 };
+    unsigned int p2Y{ 0 };
 
     Game.boardPrint();
 
-    unsigned int counter{ 0 };
     while (true)// Game loop
     {
 
-        cout << "\tPlayer 1\n";
+        cout << "\t" << p1.name << "'s turn: \n";
         Game.boardAdd(p1X - 1, p1Y - 1, p1.symbol);
-
+        if (Game.winCheck(p1.symbol))
+        {
+            p1.winCount++;
+            Game.clearBoard();
+        }
+            
         Game.boardPrint();
 
-        cout << "\tPlayer 2\n";
+        cout << "\t"<< p2.name << "'s turn: \n";
         Game.boardAdd(p2X - 1, p2Y - 1, p2.symbol);
+        if (Game.winCheck(p2.symbol))
+        {
+            p2.winCount++;
+            Game.clearBoard();
+        }
 
         Game.boardPrint();
 
-        counter++;
+        if (p1.winCount == 2 || p2.winCount == 2)
+        {
+            cout << "\tGame finished!\n";
+            break;
+
+        }
+
     }
     
 }

@@ -6,7 +6,7 @@
 struct Player
 {
 	std::string name;// Player name
-	char symbol;// Player symbol X or O
+	char symbol{' '};// Player symbol X or O
 	// char board[3][3];// Player board to check for win
 	unsigned int winCount{ 0 };
 

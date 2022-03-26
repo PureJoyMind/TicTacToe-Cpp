@@ -58,8 +58,8 @@ void GameManager::boardAdd(int x, int y, char sym)
 	std::cin >> x;
 	std::cout << "\tThe Y axis: ";
 	std::cin >> y;
-	if (board[x][y] == ' ')// empty space verification
-		board[x][y] = sym;
+	if (board[x - 1][y - 1] == ' ')// empty space verification
+		board[x - 1][y - 1] = sym;
 	else {
 		std::cout << "\tAlready filled! choose another place\n";
 		boardAdd(x, y, sym);
