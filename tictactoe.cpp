@@ -28,8 +28,6 @@ int main()
     
     cout << "\n\tThere are four rounds the best of four wins!\n ";
 
-    unsigned int gameCounter{ 1 }; // Counter for game turns
-
     // X and Y for input
     unsigned int p1X;
     unsigned int p1Y;
@@ -38,7 +36,7 @@ int main()
 
     Game.boardPrint();
 
-    while (gameCounter <= 4)// Game loop
+    while (true)// Game loop
     {
         cout << "\tChoose the coordinates X and Y: \n";
         cout << "\tPlayer 1\n";
