@@ -3,7 +3,7 @@ Making a game of Tic Tac Toe run in command line using C++
 
 # How to use
 The main function is located in tictactoe.cpp
-So far there is a GameManager class the handles the board and a Player struct that holds the players info
+So far there is a GameManager class that handles the board and a Player struct that holds the players info
 
 # About this project
 I started this project a few months ago and it really isn't hard or anything.
