@@ -39,31 +39,38 @@ int main()
     while (true)// Game loop
     {
 
+        cout << "\t" << p1.name << "'s score: " << p1.winCount << endl;
+        cout << "\t" << p2.name << "'s score: " << p2.winCount << endl;
+        cout << endl;
+
         cout << "\t" << p1.name << "'s turn: \n";
         Game.boardAdd(p1X - 1, p1Y - 1, p1.symbol);
         if (Game.winCheck(p1.symbol))
         {
             p1.winCount++;
+            cout << "\t" << p1.name << " won!\n \n";
             Game.clearBoard();
         }
             
         Game.boardPrint();
+        cout << "\n";
 
         cout << "\t"<< p2.name << "'s turn: \n";
         Game.boardAdd(p2X - 1, p2Y - 1, p2.symbol);
         if (Game.winCheck(p2.symbol))
         {
             p2.winCount++;
+            cout << "\t" << p2.name << " won!\n \n";
             Game.clearBoard();
         }
 
         Game.boardPrint();
+        cout << "\n";
 
-        if (p1.winCount == 2 || p2.winCount == 2)
+        if (p1.winCount == 4 || p2.winCount == 4)
         {
             cout << "\tGame finished!\n";
             break;
-
         }
 
     }
