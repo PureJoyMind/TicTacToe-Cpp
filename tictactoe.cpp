@@ -45,13 +45,31 @@ int main()
         cout << "\t" << p2.name << "'s score: " << p2.winCount << endl;
         cout << endl;
 
+        if (p1.winCount == 4 || p2.winCount == 4)
+        {
+            cout << "\tGame finished!\n";
+            if (p1.winCount == 4) {
+                cout << "\t" << p1.name << " Won!!!\n";
+                break;
+            }
+            else
+            {
+                cout << "\t" << p2.name << " Won!!!\n";
+                break;
+            }
+            
+        }
+
+
         cout << "\t" << p1.name << "'s turn: \n";
         Game.boardAdd(p1X - 1, p1Y - 1, p1.symbol);
         if (Game.winCheck(p1.symbol))
         {
-            p1.winCount;
+            ++p1.winCount;
+            Game.boardPrint();
             cout << "\n\t" << p1.name << " won!\n \n";
             Game.clearBoard();
+            continue;
         }
             
         Game.boardPrint();
@@ -61,20 +79,15 @@ int main()
         Game.boardAdd(p2X - 1, p2Y - 1, p2.symbol);
         if (Game.winCheck(p2.symbol))
         {
-            p2.winCount++;
+            ++p2.winCount;
+            Game.boardPrint();
             cout << "\n\t" << p2.name << " won!\n \n";
             Game.clearBoard();
+            continue;
         }
 
         Game.boardPrint();
         cout << "\n";
-
-        if (p1.winCount == 4 || p2.winCount == 4)
-        {
-            cout << "\tGame finished!\n";
-            break;
-        }
-
     }
     
 }
