@@ -38,7 +38,10 @@ int main()
 
     Game.boardPrint();
 
-    while (true)// Game loop
+    bool quit{ false };
+    char quitGame{' '};
+
+    while (quit == false)// Game loop
     {
 
         cout << "\t" << p1.name << "'s score: " << p1.winCount << endl;
@@ -57,7 +60,7 @@ int main()
                 cout << "\t" << p2.name << " Won!!!\n";
                 break;
             }
-            
+
         }
 
 
@@ -71,11 +74,11 @@ int main()
             Game.clearBoard();
             continue;
         }
-            
+
         Game.boardPrint();
         cout << "\n";
 
-        cout << "\t"<< p2.name << "'s turn: \n";
+        cout << "\t" << p2.name << "'s turn: \n";
         Game.boardAdd(p2X - 1, p2Y - 1, p2.symbol);
         if (Game.winCheck(p2.symbol))
         {
@@ -88,6 +91,11 @@ int main()
 
         Game.boardPrint();
         cout << "\n";
+        cout << "\tQuit game? (y/n) ";
+        cin >> quitGame;
+        if (quitGame == 'y' || quitGame == 'Y')
+            quit = true;
     }
     
+    cout << "\tIt was a nice Game!\n\tThank you for playing!!!\n";
 }
