@@ -3,8 +3,7 @@
 void Player::setName()
 {
 	std::cout << "	Please Enter Players Name:  ";
-	std::cin.ignore();
-	std::getline(std::cin, name);
+	std::cin >> name;
 }
 
 void Player::setSym()
