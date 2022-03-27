@@ -11,7 +11,7 @@ struct Player
 	unsigned int winCount{ 0 };
 
 	void setName();// Getting player name
-	void setSym();// Getting player symbol
+	void setSym(char sym);// Getting player symbol
 	// void transferBoard(int a,  int b, char sym);// Transfering the board from the game to players board
 	
 }; 

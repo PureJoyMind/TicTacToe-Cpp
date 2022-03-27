@@ -6,14 +6,9 @@ void Player::setName()
 	std::cin >> name;
 }
 
-void Player::setSym()
+void Player::setSym(char sym)
 {
-	std::cout << "	Enter Players Symbol( X or O ):  ";
-	std::cin >> symbol;
-	if (symbol != 'X' && symbol != 'O') {
-		std::cout << "	Invalid input!\n";
-		Player::setSym();
-	}
+	symbol = sym;
 }
 /*
 void Player::transferBoard(int a, int b, char sym)

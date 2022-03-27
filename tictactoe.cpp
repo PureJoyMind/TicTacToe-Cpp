@@ -19,12 +19,14 @@ int main()
     Player p1;
     cout << "   Player 1:\n";
     p1.setName();
-    p1.setSym();
+    p1.setSym('X');
+    cout << "\t" << p1.name << "'s icon is: " << p1.symbol << endl;
 
     cout << "   Player 2:\n";
     Player p2;
     p2.setName();
-    p2.setSym();
+    p2.setSym('O');
+    cout << "\t" << p2.name << "'s icon is: " << p2.symbol << endl;
     
     cout << "\n\tThere are four rounds the best of four wins!\n ";
 
@@ -47,8 +49,8 @@ int main()
         Game.boardAdd(p1X - 1, p1Y - 1, p1.symbol);
         if (Game.winCheck(p1.symbol))
         {
-            p1.winCount++;
-            cout << "\t" << p1.name << " won!\n \n";
+            p1.winCount;
+            cout << "\n\t" << p1.name << " won!\n \n";
             Game.clearBoard();
         }
             
@@ -60,7 +62,7 @@ int main()
         if (Game.winCheck(p2.symbol))
         {
             p2.winCount++;
-            cout << "\t" << p2.name << " won!\n \n";
+            cout << "\n\t" << p2.name << " won!\n \n";
             Game.clearBoard();
         }
 
